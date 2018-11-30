@@ -324,6 +324,7 @@ header nav ul li a:hover::after, .active::after {
 	transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	-webkit-transition: all 1s ease;
+	-o-transition: all 1s ease;
 }
 
 .galleryImage:hover .overlay {
@@ -353,6 +354,7 @@ header nav ul li a:hover::after, .active::after {
 	transition: all .8s ease;
 	-moz-transition: all .8s ease;
 	-webkit-transition: all .8s ease;
+	-o-transition: all .8s ease;
 	 width: 100%;
 }
 
