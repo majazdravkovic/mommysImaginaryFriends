@@ -1,0 +1,1099 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html {
+	min-height: 100vh;
+	font-size: 10px;
+}
+
+body {
+	/*font-family: "Oxygen Mono", monospace;*/
+	font-family: 'Quicksand', sans-serif;	
+}
+
+@font-face {
+	font-family: "Cartoon";
+	src: url("cartoonist_kooky.ttf");
+}
+
+.clear {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-4 {
+	width: 33.33%;
+	text-align: center;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+[class*= "col-"] {
+	float: left;
+}
+
+.noSelect {
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+}
+
+@keyframes showUp {
+	0%  { width: 0%; }
+	100% { width: 100%;}
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%  { width: 0%; }
+	100% { width: 100%;}
+}
+
+
+/***************** Home Page ********************/
+
+header {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	background-color: #fff;
+	z-index: 1;
+}
+
+header .logo {
+	width: 50%;
+	height: 100%;
+	line-height: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 80px;
+}
+
+header .logo p {
+	font-family: "Cartoon";
+	font-size: 1.7rem;
+	letter-spacing: 1px;
+}
+
+header nav {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 30px 0px 20px 110px;
+}
+
+header nav ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+
+header nav ul li {
+	float: left;
+}
+
+header nav ul li a {
+	font-size: 1.2rem;
+	color: #000;
+	text-decoration: none;
+	margin: 0 2rem;
+	font-weight: bold;
+}
+
+header nav ul li a::after {
+	content: "";
+	width: 0%;
+	height: .1rem;
+	background-color: #000;
+	margin: 0 auto;
+	display: block;
+	transition: width .2s;
+}
+
+header nav ul li a:hover::after, .active::after {
+	width: 30%;
+	margin-top: 5px;
+}
+
+.container1, .container2, .container3, .container4 {
+	width: 100%;
+	height: 99.75vh;
+	background-image: url("./images/home_background_1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center right;
+	background-size: cover;
+}
+
+.text1, .text2, .text3, .text4 {
+	width: 55%;
+	height: 100%;
+    display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.content {
+	text-align: center;
+}
+
+.text1 img {
+	width: 11rem;
+	height: auto;
+	margin: 13rem auto 4rem auto;
+}
+
+.text1 .content h1 {
+	font-size: 2.5rem;
+	margin-top: 3rem;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.text1 .content h2 {
+	font-size: 1.6rem;
+	letter-spacing: 1px;
+	margin: 3rem 0;
+}
+
+.button {
+	width: 23rem;
+	height: 5.2rem;
+	line-height: 5.2rem;
+	text-align: center;
+	background-color: #000;
+	margin: 6rem auto;
+	cursor: pointer;
+}
+
+.button a {
+	color: #fff;
+	text-decoration: none;
+	outline: none;
+	font-size: 1.5rem;
+	padding: 1.1rem 3rem;
+}
+
+.button:hover {
+	background-color: #808080;
+}
+
+.container2 {
+	background-image: url("./images/home_background_2.jpg");
+}
+
+.text2 {
+	width: 65%;
+	float: right;
+}
+
+.text2 h2, .text3 h2, .text4 h2 {
+	font-size: 2.2rem;
+	line-height: 5rem;
+	padding: 3rem 0;
+}
+
+.text2 h2::after, .text3 h2::after, .text4 h2::after {
+	content: "";
+	width: 30%;
+	height: 2px;
+	background-color: #666;
+	margin: 0 auto;
+	display: block;
+}
+
+.text2 p, .text3 p {
+	font-size: 1.5rem;
+	padding: 1rem 0;
+}
+
+.container3 {
+	background-image: url("./images/home_background_3a.jpg");
+	background-position: center;
+}
+
+.text3 {
+	padding-top: 5%;
+}
+
+.container4 {
+	background-image: url("./images/home_background_4a.jpg");
+	background-position: center;
+}
+
+.text4 {
+	width: 60%;
+	padding: 15rem 2rem 1rem 2rem;
+}
+
+.text4 h2 {
+	font-size: 2.5rem;
+}
+
+.text4 p {
+	font-size: 1.5rem;
+	color: #000;
+	line-height: 30px;
+}
+
+.text4 a {
+	font-weight: bold;
+	outline: none;
+}
+
+.text4 .button {
+	margin: 2.5rem auto;
+}
+
+.social {
+	padding: 1rem;	
+}
+
+.social a {
+	color: #000;
+	text-decoration: none;
+	font-size: 2rem;
+	border: 1px solid black;
+	border-radius: 5rem;
+	width: 5rem;
+	height: 5rem;
+	text-align:center;
+	padding: 1.4rem 0;
+}
+
+.social a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.text4 p {
+	padding: 1rem 0;
+}
+
+
+
+/************************ Toys ***********************/
+
+
+.galleryContainer {
+	width: 100%;
+	overflow: hidden;
+	padding: 100px 30px 50px 30px;
+}
+
+.galleryImage {
+	position: relative;
+	width: 360px;
+	height: 460px;
+	margin: 20px auto;
+}
+
+.galleryImage img {
+	display: block;
+	margin: 0px auto;
+	position: relative;
+	animation-name: showUp;
+	animation-duration: .5s;
+	-webkit-animation-name: showUp; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: .5s; /* Safari 4.0 - 8.0 */
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0);
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+.galleryImage:hover .overlay {
+	background-color: rgba(0,0,0,0.5);
+	/*background-image: url("images/snow8.gif");*/
+}
+
+.galleryImage:hover .text {
+   top: 50%;
+}
+
+ .text {
+	position: absolute;
+	color: #fff;
+	font-size: 25px;
+	letter-spacing: 2px;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,8),
+	             -1px -1px 1px rgba(0,0,0,8);
+	transition: all .8s ease;
+	-moz-transition: all .8s ease;
+	-webkit-transition: all .8s ease;
+	 width: 100%;
+}
+
+.galleryImage:hover .text {
+	opacity: 1;
+}
+
+footer {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	background-color: grey;
+}
+
+footer p {
+	font-size: 12px;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+/******************* My Story ******************************/
+
+.myStoryContainer {
+	width: 100%;
+	height: auto;
+	margin-top: 80px;
+	padding: 0rem 10rem;
+	position: relative;
+}
+
+.welcome {
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 5rem;
+}
+
+.welcome h1 {
+	font-size: 2.5rem;
+	letter-spacing: 2px;
+}
+
+.heroImage img {
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+}
+
+.aboutMe1 {
+	width: 100%;
+	height: auto;
+	margin: 2rem 0;
+	text-align: center;
+	padding: 5rem;
+	box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
+	background-color: #eee;
+}
+
+.aboutMe1 p {
+	font-size: 1.6rem;
+	line-height: 1.5;	
+}
+
+.aboutMe2 {
+	width: 35%;
+	height: 50rem;
+	margin: 2rem 0;
+	display: inline-block;
+  	background-color: #fff;
+	box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
+	padding: 4rem;
+	text-align: justify;
+	background-color: #eee;
+}
+
+.aboutMe2 h2 {
+	font-size: 2rem;
+}
+
+.aboutMe2 p, .aboutMe3 p {
+	font-size: 1.5rem;
+}
+
+.images1 {
+	float: right;
+	width: 62%;
+}
+
+.images1 img {
+	width: 100%;
+	height: auto;
+	margin: 2rem 0;
+}
+
+.aboutMe3 {
+	width: 65%;
+	height: 60rem;
+	background-color: #fff;
+	box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
+	margin: 2rem 0;
+	padding: 5rem;
+	font-size: 1.2rem;
+	text-align: justify;
+	display: inline-block;
+	background-color: #eee;
+}
+
+.images2 {
+	width: 32%;
+	height: 60rem;
+	margin: 2rem 0;
+	float: right;
+}
+
+.images2 img {
+	width: 370px;
+	height: 299px;
+}
+
+
+/***************** News ********************/
+
+
+.newsContainer {
+	width: 100%;
+	height: auto;
+	margin-top: 80px;
+    padding: 2rem;	
+}
+
+.news1 {
+	width: 90%;
+	height: 500px;
+	background-color: #eee;
+	padding: 1rem;
+	margin: 1rem auto;
+}
+
+
+/****************** Contact **************************/ 
+
+.contactMessage {
+	padding-top: 80px;
+	width: 80%;
+	text-align:center;
+	margin: 0px auto;
+	font-size: 18px;
+	line-height: 2;
+	color: #333;
+}
+
+.contact {
+	max-width: 50rem;
+	height: auto;
+	margin: 1rem auto 0px auto;
+	padding: 1rem;
+}
+
+#firstName, #email {
+	display: block;
+	width: 400px;
+	height: 50px;
+	border: 1px solid #ccc;
+	margin: 0px auto;
+	font-size: 13px;
+	padding: 0px 5px;
+}
+
+#message {
+	display: block;
+	width: 400px;
+	height: 200px;
+	border: 1px solid #ccc;
+	margin: 0px auto;
+	padding: 10px 5px;
+	font-size: 13px;
+}
+
+#sendButton {
+	display: block;
+	width: 400px;
+	height: 50px;
+	margin: 0px auto;
+	background-color: #000;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+#sendButton:hover {
+	background-color: #808080;
+}
+
+.contactData {
+	text-align: center;
+	font-size: 1.4rem;
+	padding: 40px 0px 30px 0px;
+	font-weight: bold;
+}
+
+
+/***************** Dolls ******************/
+
+.aboutDolls {
+	width: 100%;
+	padding: 30px 250px;
+	margin-top: 80px;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.gallery {
+	text-align: center;
+}
+
+.gallery img {
+	margin: .8rem;
+	transition: all 0.5s ease;
+}
+
+.gallery img:hover {
+	transform: scale(1.05);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+}
+
+
+/****************** Instructions **************************/
+
+.instructionsSlider {
+	width: 55%;
+	height: auto;
+	margin: 85px auto;
+}
+
+
+
+/***************** Tablet Responsive  1250 ******************/
+
+@media only screen and (max-width: 1250px) {
+
+		
+[class*="col-"] {
+	width: 50%;
+}
+
+.col-4 {
+	width: 50%;
+}
+
+html {
+	font-size: 9px;
+}
+  
+header .logo {
+	width: 50%;
+	padding: 0 0 0 30px;
+}
+
+header nav {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 30px 0px 20px 50px;
+}
+
+.container1 {
+	background-image: url("./images/home_background_1_medium.jpg");
+	background-position: center;
+}
+
+.container2 {
+	background-image: url("./images/home_background_2_medium.jpg");
+	background-position: center;
+}
+
+.container3 {
+	background-image: url("./images/home_background_3_medium.jpg");
+	background-position: center top;
+}
+
+.container4 {
+	background-image: url("./images/home_background_4_medium.jpg");
+	background-position: center right;
+}
+
+.text1, .text2, .text3, .text4 {
+	width: 55%;
+}
+
+.text4 .button {
+	margin: 2rem auto;
+}
+
+.social {
+	padding: 1rem;
+}
+  
+.instructionsSlider {
+	width: 80%;
+}
+
+
+.aboutMe2 {
+	width: 35%;
+	height: auto;
+	margin: 2rem 0;
+	display: inline-block;
+  	background-color: #fff;
+	box-shadow: 2px 2px 7px rgba(0,0,0,0.3);
+	padding: 4rem;
+	text-align: justify;
+	background-color: #eee;
+}
+
+.aboutMe2 h2 {
+	font-size: 2rem;
+}
+
+.aboutMe2 p, .aboutMe3 p {
+	font-size: 1.5rem;
+}
+
+.images1 {
+	float: right;
+	width: 62%;
+}
+
+.images1 img {
+	width: 100%;
+	height: auto;
+	margin: 2rem 0;
+}
+
+.aboutMe3 {
+	width: 100%;
+	height: 100%;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    text-align:center;	
+}
+
+.images2 {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	
+}
+
+.images2 img {
+	width: 45%;
+	height: auto;
+	margin: 20px 10px;
+	float: none;
+	display: inline;
+}
+
+.aboutDolls {
+	padding: 30px 200px;	
+}
+	
+}
+
+/***************** Tablet Responsive 1000px ******************/
+
+@media only screen and (max-width: 1000px) {
+
+
+[class*="col-"] {
+	width: 100%;
+}
+
+.col-4 {
+	width: 50%;
+}
+
+.galleryImage {
+	position: relative;
+	width: 310px;
+	height: 410;
+	margin: 20px auto;
+}
+
+html {
+	font-size: 8px;
+}
+
+header .logo {
+	width: 70%;
+	padding: 0 0 0 20px;
+}
+
+header nav {
+	width: 100%;
+	height: auto;
+	top: 80px;
+	right: 0px;
+	padding: 0px;
+}
+
+nav ul {
+	display: none;
+}
+
+nav::before {
+	content: "\2630";
+	color: #000;
+	font-size: 3.8em;
+	position: absolute;
+	right: 3%;
+	top: -60px;
+	cursor: pointer;
+	}
+
+.open ul {
+	background-color: rgba(0, 0, 0, 0.7);
+	display: block;
+}
+
+.open ul li {
+	float: none;
+	padding: 1.8rem;
+}
+
+.open ul li a {
+	font-size: 1.6rem;
+	color: #fff;
+	margin: 0 2rem;
+	font-weight: bold;
+	display: block;
+}
+
+.open ul li a::after {
+	height: 0;
+}
+
+.open ul li:hover {
+	background-color: rgba(60, 60, 60, 0.6);
+}
+.open ul li a:hover {
+	color: #fff;
+	margin-top: 0;
+}
+
+.open ul li a:hover::after, .active::after {
+	width: 0;
+	height: 0;
+	margin: 0;
+}
+
+.open ul li a:hover::after, .active::after {
+	width: 0;
+	height: 0;
+	margin: 0;
+}
+
+.container2 {
+	background-image: url("./images/home_background_2_medium.jpg");
+	background-position: center;
+}
+
+.container4 {
+	background-image: url("./images/home_background_4_medium.jpg");
+	background-position: center;
+}
+
+.text1, .text2, .text3, .text4 {
+	width: 70%;
+}
+  
+.social {
+	padding: 2rem;
+}
+
+.myStoryContainer {
+	padding: 0rem 5rem;
+}
+
+
+.aboutMe1 {
+	padding: 3rem;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.aboutMe2 {
+	width: 100%;
+	height: auto;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+	text-align: center;
+}
+
+.images1 {
+	width: 100%;
+	height: auto;
+	float: none;
+}
+
+.images1 img {
+	width: 100%;
+	height: auto;
+}
+
+.aboutMe3 {
+	width: 100%;
+	height: 100%;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    text-align:center;	
+}
+
+.images2 {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	
+}
+
+.images2 img {
+	width: 70%;
+	height: auto;
+	margin: 20px auto;
+	float: none;
+}
+
+.aboutDolls {
+	padding: 30px 150px;	
+}
+
+}
+
+
+@media only screen and (max-width: 700px) {
+	
+html {
+	font-size: 7.5px;
+}
+
+.col-4 {
+	width: 100%;
+}
+
+
+.text1, .text2, .text3, .text4 {
+	width: 70%;
+  }
+  
+.aboutDolls {
+	padding: 30px 100px;	
+}
+	
+}
+
+
+/******************* Mobile Responsive *********************/
+
+@media only screen and (max-width: 500px) {
+
+[class*="col-"] {
+	width: 100%;
+}
+
+.col-4 {
+	width: 100%;
+}
+
+html {
+	font-size: 6.5px;
+}
+  
+header .logo {
+	width: 70%;
+	padding: 0 0 0 20px;
+}
+
+header nav {
+	width: 100%;
+	height: auto;
+	top: 80px;
+	right: 0px;
+	padding: 0px;
+}
+
+nav ul {
+	display: none;
+}
+
+nav::before {
+	content: "\2630";
+	color: #000;
+	font-size: 3.8em;
+	position: absolute;
+	right: 3%;
+	top: -60px;
+	cursor: pointer;
+	}
+
+.open ul {
+	background-color: rgba(0, 0, 0, 0.7);
+	display: block;
+}
+
+.open ul li {
+	float: none;
+	padding: 2rem;
+}
+
+.open ul li a {
+	font-size: 1.8rem;
+	color: #fff;
+	margin: 0 2rem;
+	font-weight: bold;
+}
+
+.open ul li a::after {
+	height: 0;
+}
+.open ul li a:hover {
+	color: #808080;
+	margin-top: 0;
+}
+
+.open ul li a:hover::after, .active::after {
+	width: 0;
+	height: 0;
+	margin: 0;
+}
+
+.container1 {
+	background-image: url("./images/home_background_1_small.jpg");
+	background-position: center right;
+}
+
+.container2 {
+	background-image: url("./images/home_background_2_small.jpg");
+	background-position: center right;
+}
+
+.container3 {
+	background-image: url("./images/home_background_3_small.jpg");
+	background-position: center right;
+}
+
+.container4 {
+	background-image: url("./images/home_background_4_medium.jpg");
+	background-position: top right;
+}
+.text1, .text2, .text3, .text4 {
+	width: 100%;
+}
+  
+.contactMessage {
+	width: 80%;
+	text-align:center;
+	margin: 80px auto 40px auto;
+	font-size: 15px;
+	color: #333;
+	padding: 0px;
+}
+
+.contact {
+	max-width: 50rem;
+	height: auto;
+}
+
+#firstName, #email {
+	max-width: 45rem;
+	height: 40px;
+	font-size: 13px;
+}
+
+#message {
+	width: 45rem;
+}
+
+#sendButton {
+	width: 45rem;
+	height: 45px;
+	font-size: 15px;
+	
+}
+
+.contactData {
+	font-size: 1.2rem;
+	
+}
+
+/******************* My Story ******************************/
+
+.myStoryContainer {
+	padding: 0rem 5rem;
+}
+
+
+.aboutMe1 {
+	padding: 3rem;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.aboutMe2 {
+	width: 100%;
+	height: auto;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+	text-align: center;
+}
+
+.images1 {
+	width: 100%;
+	height: auto;
+	float: none;
+}
+
+.images1 img {
+	width: 100%;
+	height: auto;
+}
+
+.aboutMe3 {
+	width: 100%;
+	height: 100%;
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    text-align:center;	
+}
+
+.images2 {
+	width: 100%;
+	height: auto;
+	float: none;
+}
+
+.images2 img {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+.aboutDolls {
+	padding: 30px 50px;	
+}
+  
+}
